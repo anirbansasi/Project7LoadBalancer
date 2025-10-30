@@ -1,0 +1,14 @@
+Setup: We deployed a simple web application on multiple EC2 instances within AWS.
+An Application Load Balancer (ALB) was configured to distribute incoming traffic evenly among the instances.
+Then, an Auto Scaling Group (ASG) was created with a launch template to automatically add or remove instances based on performance metrics (like CPU utilization).
+
+What Happened During Scaling:
+
+Initially, one or two instances handled all user requests.
+
+When traffic increased and CPU usage crossed the threshold (e.g., 70%), the Auto Scaling Group automatically launched new EC2 instances to balance the load.
+
+The Load Balancer instantly started routing traffic to the new instances, ensuring smooth performance.
+
+When traffic decreased and usage dropped, the Auto Scaling Group terminated extra instances to save cost.
+Result: The web app maintained high availability, fault tolerance, and cost efficiency — scaling up during heavy traffic and scaling down when idle.
